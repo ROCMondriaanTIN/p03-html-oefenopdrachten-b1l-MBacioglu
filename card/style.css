@@ -50,6 +50,29 @@ body{
 }
 
 .card{
-    border: 1px solid var(--main-color);
-    
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
 }
+
+.card button{
+    margin-top: auto;
+}
+
+@media  (max-width: 800px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-rows: 50px minmax(200px, 1fr) 50px;
+        gap: 5px;
+        grid-template-areas: 
+        "hd hd"
+        "ls cc"
+        "ft ft";
+    }
+
+    .right-sidebar{
+        display: none;
+    }
+}
+    
